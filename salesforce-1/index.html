@@ -692,6 +692,9 @@
     <!-- Form Visibility Handler (Campaign-Specific) -->
     <script>
         document.addEventListener('formSubmissionSuccess', function () {
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
             // Hide form, show thank you message permanently
             document.querySelector('main:not(#thankyou)').style.display = 'none';
             document.getElementById('thankyou').style.display = 'block';
